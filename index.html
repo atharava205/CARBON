@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Chemistry Nomenclature</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="red" stroke="darkred" stroke-width="2"/></svg>'), auto;
+            overflow-x: auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            text-align: center;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            margin: 0;
+            padding: 25px;
+            font-size: 2.2em;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            color: black;
+            table-layout: auto;
+            min-width: 600px;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: black;
+            padding: 18px 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #3498db;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #e8e8e8;
+            font-size: 1.05em;
+            color: black;
+            background: white;
+            word-wrap: break-word;
+            hyphens: auto;
+            max-width: 200px;
+        }
+        
+        tr:nth-child(even) td {
+            background-color: #f8f9ff;
+            color: black;
+        }
+        
+        tr:hover td {
+            background-color: #e3f2fd;
+            color: black;
+        }
+        
+        .subscript {
+            font-size: 0.8em;
+            vertical-align: sub;
+            color: black;
+        }
+        
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 4em;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            pointer-events: none;
+            user-select: none;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            white-space: nowrap;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .watermark {
+                font-size: 2.5em;
+                transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .watermark {
+                font-size: 2em;
+                transform: translate(-50%, -50%) rotate(-45deg) scale(0.7);
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            .watermark {
+                font-size: 1.5em;
+                transform: translate(-50%, -50%) rotate(-45deg) scale(0.6);
+            }
+        }
+        
+        /* Landscape mobile adjustments */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .watermark {
+                font-size: 2em;
+                transform: translate(-50%, -50%) rotate(-45deg) scale(0.6);
+            }
+        }
+        
+        /* Mobile responsive styles for entire page */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 10px;
+                margin: 0;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+                padding: 20px 15px;
+            }
+            
+            table {
+                font-size: 0.9em;
+                min-width: 500px;
+            }
+            
+            th {
+                padding: 12px 8px;
+                font-size: 0.9em;
+            }
+            
+            td {
+                padding: 10px 8px;
+                font-size: 0.85em;
+                max-width: 150px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+                padding: 15px 10px;
+            }
+            
+            table {
+                font-size: 0.8em;
+                min-width: 400px;
+            }
+            
+            th {
+                padding: 10px 6px;
+                font-size: 0.8em;
+                letter-spacing: 0.5px;
+            }
+            
+            td {
+                padding: 8px 6px;
+                font-size: 0.75em;
+                max-width: 120px;
+            }
+            
+            .subscript {
+                font-size: 0.7em;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            h1 {
+                font-size: 1.3em;
+                padding: 12px 8px;
+            }
+            
+            table {
+                min-width: 300px;
+                font-size: 0.7em;
+            }
+            
+            th {
+                padding: 8px 4px;
+                font-size: 0.7em;
+            }
+            
+            td {
+                padding: 6px 4px;
+                font-size: 0.65em;
+                max-width: 100px;
+            }
+            
+            .subscript {
+                font-size: 0.6em;
+            }
+        }
+        
+        /* Table wrapper for horizontal scrolling on small screens */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark">W.W.O</div>
+    <div class="container">
+        <h1>🧪 Organic Chemistry Nomenclature Reference</h1>
+        
+        <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th style="color: black;">Compound Name</th>
+                    <th style="color: black;">IUPAC Suffix</th>
+                    <th style="color: black;">Functional Group Structure</th>
+                    <th style="color: black;">Position/Notes</th>
+                    <th style="color: black;">General Formula</th>
+                    <th style="color: black;">Cyclic Formula</th>
+                    <th style="color: black;">Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: black;">Alkane</td>
+                    <td style="color: black;">-ane</td>
+                    <td style="color: black;">C — C</td>
+                    <td style="color: black;">—</td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n+2</span></td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n</span></td>
+                    <td style="color: black;">CH<span class="subscript" style="color: black;">4</span>, C<span class="subscript" style="color: black;">2</span>H<span class="subscript" style="color: black;">6</span></td>
+                </tr>
+                <tr>
+                    <td style="color: black;">Alkene</td>
+                    <td style="color: black;">-ene</td>
+                    <td style="color: black;">C = C</td>
+                    <td style="color: black;">2 carbons at least required</td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n</span></td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n-2</span></td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">2</span>H<span class="subscript" style="color: black;">4</span></td>
+                </tr>
+                <tr>
+                    <td style="color: black;">Alkyne</td>
+                    <td style="color: black;">-yne</td>
+                    <td style="color: black;">C ≡ C</td>
+                    <td style="color: black;">—</td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n-2</span></td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n-4</span></td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">2</span>H<span class="subscript" style="color: black;">2</span></td>
+                </tr>
+                <tr>
+                    <td style="color: black;">Chloro/Bromo</td>
+                    <td style="color: black;">chloro, bromo</td>
+                    <td style="color: black;">C — Cl</td>
+                    <td style="color: black;">Before</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">CH<span class="subscript" style="color: black;">3</span>Cl</td>
+                </tr>
+                <tr>
+                    <td style="color: black;">Alcohol</td>
+                    <td style="color: black;">-ol</td>
+                    <td style="color: black;">C — OH</td>
+                    <td style="color: black;">—</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">CH<span class="subscript" style="color: black;">3</span>OH</td>
+                </tr>
+                <tr>
+                    <td style="color: black;">Aldehyde</td>
+                    <td style="color: black;">-al</td>
+                    <td style="color: black;">
+                        <div style="line-height: 1.2; color: black;">
+                            O<br>
+                            ||<br>
+                            -C-H
+                        </div>
+                    </td>
+                    <td style="color: black;">After</td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n</span>O</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">HCHO, CH<span class="subscript" style="color: black;">3</span>CHO</td>
+                </tr>
+                <tr>
+                    <td style="color: black;">Ketone</td>
+                    <td style="color: black;">-one</td>
+                    <td style="color: black;">
+                        <div style="line-height: 1.2; color: black;">
+                            O<br>
+                            ||<br>
+                            -C-
+                        </div>
+                    </td>
+                    <td style="color: black;">In between (3 carbons at least required)</td>
+                    <td style="color: black;">C<span class="subscript" style="color: black;">n</span>H<span class="subscript" style="color: black;">2n</span>O</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">CH<span class="subscript" style="color: black;">3</span>COCH<span class="subscript" style="color: black;">3</span></td>
+                </tr>
+                <tr>
+                    <td style="color: black;">Carboxylic Acid</td>
+                    <td style="color: black;">-oic acid</td>
+                    <td style="color: black;">
+                        <div style="line-height: 1.2; color: black;">
+                            O<br>
+                            ||<br>
+                            -C-OH
+                        </div>
+                    </td>
+                    <td style="color: black;">After</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">X</td>
+                    <td style="color: black;">HCOOH, CH<span class="subscript" style="color: black;">3</span>COOH</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
